@@ -14,6 +14,7 @@ public class Dynamic_Drop_Down {
 
         List<WebElement> list = driver.findElements(By.xpath("//li"));
 
+
         for (WebElement item : list) {
             if (item.getText().contains("car travel")) {
                 item.click();
