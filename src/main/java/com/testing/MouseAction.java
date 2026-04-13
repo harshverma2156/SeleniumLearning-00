@@ -17,8 +17,10 @@ public class MouseAction {
         Thread.sleep(10000);
 
         WebElement profile = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/img"));
+        WebElement viewprofile = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/div/a"));
         Actions act = new Actions(driver);
-        act.moveToElement(profile);
+
+        act.moveToElement(profile).moveToElement(viewprofile).click().build().perform();
 
     }
 }
